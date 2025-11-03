@@ -1,32 +1,5 @@
 // Inicializar AOS (Animate On Scroll)
 document.addEventListener('DOMContentLoaded', function() {
-    const darkModeToggle = document.getElementById('dark-mode-toggle');
-    const body = document.body;
-
-    // Funciòn para aplicar el tema
-    const applyTheme = (theme) => {
-        if (theme === 'dark') {
-            body.classList.add('dark-mode');
-            if(darkModeToggle) darkModeToggle.checked = true;
-        } else {
-            body.classList.remove('dark-mode');
-            if(darkModeToggle) darkModeToggle.checked = false;
-        }
-    };
-
-    // Cargar el tema guardado
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    applyTheme(savedTheme);
-
-    // Event listener para el interruptor
-    if (darkModeToggle) {
-        darkModeToggle.addEventListener('change', () => {
-            const newTheme = darkModeToggle.checked ? 'dark' : 'light';
-            localStorage.setItem('theme', newTheme);
-            applyTheme(newTheme);
-        });
-    }
-
     AOS.init({
         duration: 1000,
         once: true,

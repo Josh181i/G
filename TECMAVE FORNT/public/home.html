@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="../assets/css/disney-style.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/dark-mode.css">
-    <link rel="stylesheet" href="../assets/css/dark-mode.css">
-    <link rel="stylesheet" href="../assets/css/dark-mode.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <!-- Google Fonts -->
@@ -39,12 +37,10 @@
             </div>
 
             <div class="nav-actions">
-                <div class="theme-switch-wrapper">
-                    <label class="theme-switch" for="checkbox">
-                        <input type="checkbox" id="dark-mode-toggle"/>
-                        <div class="slider round"></div>
-                    </label>
-                </div>
+                <button id="theme-toggle" class="btn-icon">
+                    <i id="sun-icon" class="fas fa-sun"></i>
+                    <i id="moon-icon" class="fas fa-moon" style="display: none;"></i>
+                </button>
                 <a href="tel:+50622223333" class="nav-phone">
                     <i class="fas fa-phone"></i>
                     +506 2222-3333
@@ -374,6 +370,7 @@
     <!-- AOS Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../assets/js/disney-script.js"></script>
+    <script src="../assets/js/theme-toggle.js"></script>
     <script defer src="../assets/js/footer-config.js"></script>
 </body>
 </html>
